@@ -1,4 +1,4 @@
-package com.uoons.product.serviceImpl.service;
+package com.uoons.product.service;
 
 import com.uoons.product.entity.Category;
 

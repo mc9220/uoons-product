@@ -15,6 +15,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.net.URL;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -27,7 +29,7 @@ public class ProductImage {
 	private long productImageId;
 	
 	@Column(name = "product_image_url")
-	private String productImageUrl;
+	private URL productImageUrl;
 	
 	@Column(name = "image_type")
 	private String imageType;

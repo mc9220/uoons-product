@@ -1,7 +1,7 @@
 package com.uoons.product.controller;
 
 import com.uoons.product.entity.Category;
-import com.uoons.product.serviceImpl.service.CategoryService;
+import com.uoons.product.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

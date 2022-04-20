@@ -12,14 +12,14 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-   @Query(value = "select * from product_detail where product_name like %:productName% ", nativeQuery = true)
-    List<Product> getByProductName(@Param("productName") String productName);
 
-    @Query(value = "select * from product_detail where brand_name like %:brandName% ", nativeQuery = true)
-    List<Product> getByBrandName(@Param("brandName")String brandName);
+    List<Product> findByProductName( String productName);
 
-    List<Product> findBySellerId(long sellerId);
-
-    @Query(value = "select * from product_detail where sub_category_id = :subCategoryId ", nativeQuery = true)
-    List<Product> findBySubCategoryId(@Param("subCategoryId") long subCategoryId);
+//    @Query(value = "select * from product_detail where brand_name like %:brandName% ", nativeQuery = true)
+//    List<Product> getByBrandName(@Param("brandName")String brandName);
+//
+//    List<Product> findBySellerId(long sellerId);
+//
+//    @Query(value = "select * from product_detail where sub_category_id = :subCategoryId ", nativeQuery = true)
+//    List<Product> findBySubCategoryId(@Param("subCategoryId") long subCategoryId);
 }

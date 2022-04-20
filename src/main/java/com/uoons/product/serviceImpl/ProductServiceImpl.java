@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.uoons.product.entity.Product;
 import com.uoons.product.repository.ProductRepository;
-import com.uoons.product.serviceImpl.service.ProductService;
+import com.uoons.product.service.ProductService;
 
 @Service
 public class ProductServiceImpl implements ProductService{
@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService{
 	private ProductRepository productRepository;
 	@Override
 	public List<Product> getAllProduct() {
-		
+
 		return productRepository.findAll();
 	}
 	@Override
@@ -24,27 +24,12 @@ public class ProductServiceImpl implements ProductService{
 		return productRepository.getById(productId);
 	}
 	@Override
-	public Product addProduct(Product product) {		
+	public Product addProduct(Product product) {
 		return productRepository.save(product);
 	}
 
 	@Override
 	public List<Product> getByProductName(String productName) {
-		return productRepository.getByProductName(productName);
-
-	}
-	@Override
-	public List<Product> getByBrandName(String brandName) {
-		return productRepository.getByBrandName(brandName);
-	}
-
-	@Override
-	public List<Product> getBySellerId(long sellerId) {
-		return productRepository.findBySellerId(sellerId);
-	}
-
-	@Override
-	public List<Product> getBySubCategoryId(long subCategoryId) {
-		return productRepository.findBySubCategoryId(subCategoryId);
+		return productRepository.findByProductName(productName);
 	}
 }

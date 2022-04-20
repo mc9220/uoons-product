@@ -2,7 +2,7 @@ package com.uoons.product.serviceImpl;
 
 import com.uoons.product.entity.Category;
 import com.uoons.product.repository.CategoryRepository;
-import com.uoons.product.serviceImpl.service.CategoryService;
+import com.uoons.product.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

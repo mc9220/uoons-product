@@ -1,4 +1,4 @@
-package com.uoons.product.serviceImpl.service;
+package com.uoons.product.service;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ public interface ProductService {
 	Product addProduct(Product product);
 
     List<Product> getByProductName(String productName);
-    List<Product> getByBrandName(String brandName);
-
-	List<Product> getBySellerId(long sellerId);
-
-	List<Product> getBySubCategoryId(long subCategoryId);
+//    List<Product> getByBrandName(String brandName);
+//
+//	List<Product> getBySellerId(long sellerId);
+//
+//	List<Product> getBySubCategoryId(long subCategoryId);
 }
